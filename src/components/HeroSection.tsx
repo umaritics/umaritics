@@ -1,6 +1,7 @@
 import { useEffect, useState, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import HeroScene from "./HeroScene";
+import HeroCircuit from "./HeroCircuit";
 import { ChevronDown, Github, Linkedin, Twitter } from "lucide-react";
 
 const glitchVariants = {
