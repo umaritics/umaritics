@@ -1,6 +1,14 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Mail, MapPin, Send, Github, Linkedin, Twitter, Heart } from "lucide-react";
+import {
+  Mail,
+  MapPin,
+  Send,
+  Github,
+  Linkedin,
+  Twitter,
+  Heart,
+} from "lucide-react";
 
 const ContactSection = () => {
   const ref = useRef(null);
@@ -15,12 +23,15 @@ const ContactSection = () => {
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="mb-16"
         >
-          <span className="text-xs font-mono text-primary/60 tracking-[0.3em] uppercase block mb-3">// Contact</span>
+          <span className="text-xs font-mono text-primary/60 tracking-[0.3em] uppercase block mb-3">
+            // Contact
+          </span>
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-gradient inline-block">
             Let's Connect
           </h2>
           <p className="text-muted-foreground mt-3 text-lg max-w-xl">
-            Have a project in mind or want to collaborate? I'd love to hear from you.
+            Have a project in mind or want to collaborate? I'd love to hear from
+            you.
           </p>
           <motion.div
             initial={{ width: 0 }}
@@ -38,12 +49,15 @@ const ContactSection = () => {
             className="space-y-6"
           >
             {[
-              { icon: Mail, label: "Email", value: "umar@example.com" },
+              { icon: Mail, label: "Email", value: "umar.irpk@gmail.com" },
               { icon: MapPin, label: "Location", value: "Available Worldwide" },
             ].map((item, i) => (
               <motion.div
                 key={item.label}
-                whileHover={{ x: 8, boxShadow: '0 0 25px hsl(25 95% 53% / 0.1)' }}
+                whileHover={{
+                  x: 8,
+                  boxShadow: "0 0 25px hsl(25 95% 53% / 0.1)",
+                }}
                 className="bento-item flex items-center gap-4"
                 data-hoverable
               >
@@ -51,7 +65,9 @@ const ContactSection = () => {
                   <item.icon className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <p className="text-xs text-muted-foreground font-mono">{item.label}</p>
+                  <p className="text-xs text-muted-foreground font-mono">
+                    {item.label}
+                  </p>
                   <p className="text-foreground font-heading">{item.value}</p>
                 </div>
               </motion.div>
@@ -70,7 +86,10 @@ const ContactSection = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ delay: 0.4 + i * 0.1 }}
-                  whileHover={{ y: -3, boxShadow: '0 0 20px hsl(25 95% 53% / 0.2)' }}
+                  whileHover={{
+                    y: -3,
+                    boxShadow: "0 0 20px hsl(25 95% 53% / 0.2)",
+                  }}
                   className="p-3 rounded-xl glass hover:border-primary/50 transition-all duration-300"
                 >
                   <Icon className="w-5 h-5 text-muted-foreground hover:text-primary transition-colors" />
@@ -88,7 +107,9 @@ const ContactSection = () => {
           >
             <div className="grid sm:grid-cols-2 gap-4">
               <div>
-                <label className="text-xs text-muted-foreground font-mono mb-1.5 block">Name</label>
+                <label className="text-xs text-muted-foreground font-mono mb-1.5 block">
+                  Name
+                </label>
                 <input
                   type="text"
                   placeholder="Your name"
@@ -96,7 +117,9 @@ const ContactSection = () => {
                 />
               </div>
               <div>
-                <label className="text-xs text-muted-foreground font-mono mb-1.5 block">Email</label>
+                <label className="text-xs text-muted-foreground font-mono mb-1.5 block">
+                  Email
+                </label>
                 <input
                   type="email"
                   placeholder="your@email.com"
@@ -105,7 +128,9 @@ const ContactSection = () => {
               </div>
             </div>
             <div>
-              <label className="text-xs text-muted-foreground font-mono mb-1.5 block">Subject</label>
+              <label className="text-xs text-muted-foreground font-mono mb-1.5 block">
+                Subject
+              </label>
               <input
                 type="text"
                 placeholder="Project inquiry"
@@ -113,7 +138,9 @@ const ContactSection = () => {
               />
             </div>
             <div>
-              <label className="text-xs text-muted-foreground font-mono mb-1.5 block">Message</label>
+              <label className="text-xs text-muted-foreground font-mono mb-1.5 block">
+                Message
+              </label>
               <textarea
                 rows={4}
                 placeholder="Tell me about your project..."
@@ -122,7 +149,10 @@ const ContactSection = () => {
             </div>
             <motion.button
               type="submit"
-              whileHover={{ scale: 1.02, boxShadow: '0 0 30px hsl(25 95% 53% / 0.3)' }}
+              whileHover={{
+                scale: 1.02,
+                boxShadow: "0 0 30px hsl(25 95% 53% / 0.3)",
+              }}
               whileTap={{ scale: 0.98 }}
               className="w-full py-3 rounded-lg bg-primary text-primary-foreground font-heading font-semibold flex items-center justify-center gap-2 hover:opacity-90 transition-opacity"
               data-hoverable
@@ -139,9 +169,11 @@ const ContactSection = () => {
           className="mt-20 pt-8 border-t border-border/50 text-center"
         >
           <p className="text-sm text-muted-foreground font-mono flex items-center justify-center gap-1.5">
-            Built with <Heart className="w-3.5 h-3.5 text-primary fill-primary" /> by Muhammad Umar
+            Built by Muhammad Umar
           </p>
-          <p className="text-xs text-muted-foreground/50 mt-2">© 2024 All rights reserved.</p>
+          <p className="text-xs text-muted-foreground/50 mt-2">
+            © 2026 All rights reserved.
+          </p>
         </motion.div>
       </div>
     </footer>

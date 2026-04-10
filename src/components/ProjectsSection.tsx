@@ -16,63 +16,142 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "E-Commerce Platform",
-    description: "Full-stack e-commerce solution with real-time inventory management and payment processing.",
-    longDescription: "Built a comprehensive e-commerce platform supporting multi-vendor operations, real-time inventory tracking, Stripe payment integration, and an admin dashboard with analytics.",
+    title: "Resumator",
+    description:
+      "AI-powered resume generator built to create professional CVs dynamically.",
+    longDescription:
+      "An intelligent resume generation tool that leverages the Gemini API to help users craft professional resumes seamlessly. Built for high performance and fast global access.",
     images: [
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop",
+      "https://placehold.co/800x500/1a1a1a/e2e8f0?text=Resumator+Image+1",
+      "https://placehold.co/800x500/1a1a1a/e2e8f0?text=Resumator+Image+2",
     ],
-    tech: ["React", "Node.js", "PostgreSQL", "Stripe", "Redis"],
+    tech: ["Next.js", "Gemini", "Tailwind CSS", "Vercel"],
     github: "#",
     live: "#",
-    category: "Web",
+    category: "Web / AI",
   },
   {
-    title: "AI Task Manager",
-    description: "Intelligent task management app with AI-powered prioritization and scheduling.",
-    longDescription: "Developed an AI-powered task manager that uses NLP to categorize tasks, predict deadlines, and suggest optimal scheduling based on user behavior patterns.",
+    title: "Concisio",
+    description:
+      "Intelligent blog summarizer powered by Hugging Face NLP models.",
+    longDescription:
+      "A web application designed to distill lengthy blog posts into concise summaries. It integrates advanced Hugging Face models to process text and deliver a seamless reading experience.",
     images: [
-      "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&h=500&fit=crop",
+      "https://placehold.co/800x500/1a1a1a/e2e8f0?text=Concisio+Image+1",
+      "https://placehold.co/800x500/1a1a1a/e2e8f0?text=Concisio+Image+2",
     ],
-    tech: ["Python", "React", "TensorFlow", "FastAPI", "MongoDB"],
+    tech: ["Next.js", "Hugging Face", "Tailwind CSS", "Vercel"],
     github: "#",
     live: "#",
-    category: "AI/ML",
+    category: "Web / AI",
   },
   {
-    title: "Cross-Platform Chat App",
-    description: "Real-time messaging app for web, iOS, and Android with end-to-end encryption.",
-    longDescription: "Engineered a cross-platform messaging application with WebSocket-based real-time communication, E2E encryption, media sharing, and push notifications.",
+    title: "Socially",
+    description:
+      "Full-featured Instagram clone with real-time interactions and video calling.",
+    longDescription:
+      "A comprehensive social media platform replicating core Instagram functionalities. Features include uploading posts and stories, real-time messaging, commenting, follow/unfollow mechanisms, editing profiles, and live video calling.",
     images: [
-      "https://images.unsplash.com/photo-1611606063065-ee7946f0787a?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?w=800&h=500&fit=crop",
+      "https://placehold.co/800x500/1a1a1a/e2e8f0?text=Socially+Image+1",
+      "https://placehold.co/800x500/1a1a1a/e2e8f0?text=Socially+Image+2",
+      "https://placehold.co/800x500/1a1a1a/e2e8f0?text=Socially+Image+3",
     ],
-    tech: ["React Native", "Firebase", "Node.js", "Socket.io", "TypeScript"],
+    tech: [
+      "Kotlin",
+      "Firebase Auth",
+      "Firebase DB",
+      "MySQL",
+      "PHP",
+      "Agora API",
+      "Picasso",
+      "XML",
+    ],
     github: "#",
     category: "Mobile",
   },
   {
-    title: "DevOps Dashboard",
-    description: "Comprehensive monitoring and CI/CD pipeline visualization tool for engineering teams.",
-    longDescription: "Created a real-time DevOps dashboard integrating multiple cloud providers, CI/CD pipeline status, server metrics, and alert management in one unified interface.",
+    title: "List It",
+    description:
+      "C2C marketplace app featuring real-time bidding, messaging, and geolocation.",
+    longDescription:
+      "A mobile marketplace where users can buy and sell items directly. It incorporates advanced features like real-time bidding, integrated messaging, dynamic wishlists, and location-based services.",
     images: [
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&h=500&fit=crop",
+      "https://placehold.co/800x500/1a1a1a/e2e8f0?text=List+It+Image+1",
+      "https://placehold.co/800x500/1a1a1a/e2e8f0?text=List+It+Image+2",
     ],
-    tech: ["React", "Docker", "Grafana", "AWS", "Electron"],
+    tech: ["Kotlin", "PHP", "Firebase", "Agora API", "Geolocation APIs"],
     github: "#",
-    live: "#",
+    category: "Mobile",
+  },
+  {
+    title: "FastPay",
+    description:
+      "Digital banking wallet with intelligent balance partition functionality.",
+    longDescription:
+      "A robust digital wallet application built for secure fund management. It allows users to partition their balances for better financial tracking and organization.",
+    images: [
+      "https://placehold.co/800x500/1a1a1a/e2e8f0?text=FastPay+Image+1",
+      "https://placehold.co/800x500/1a1a1a/e2e8f0?text=FastPay+Image+2",
+    ],
+    tech: ["JavaFX", "Supabase"],
+    github: "#",
+    category: "Desktop",
+  },
+  {
+    title: "Travel Ease",
+    description:
+      "Comprehensive desktop application for travel agency management.",
+    longDescription:
+      "A management system designed to handle the complex data and operations of a travel agency, utilizing a reliable relational database architecture for scale.",
+    images: [
+      "https://placehold.co/800x500/1a1a1a/e2e8f0?text=Travel+Ease+Image+1",
+      "https://placehold.co/800x500/1a1a1a/e2e8f0?text=Travel+Ease+Image+2",
+    ],
+    tech: ["C#", ".NET", "SQL Server (SSMS)"],
+    github: "#",
+    category: "Desktop",
+  },
+  {
+    title: "Cell Sense",
+    description:
+      "Smart battery alarm and analytics tool utilizing real-time system data.",
+    longDescription:
+      "A desktop utility tool that reads real-time Windows battery reports and status data to provide smart alarms and detailed analytics, helping users prolong their device's battery lifespan.",
+    images: [
+      "https://placehold.co/800x500/1a1a1a/e2e8f0?text=Cell+Sense+Image+1",
+      "https://placehold.co/800x500/1a1a1a/e2e8f0?text=Cell+Sense+Image+2",
+    ],
+    tech: ["JavaFX", "Windows Data Reports"],
+    github: "#",
+    category: "Desktop",
+  },
+  {
+    title: "Swift Cart",
+    description:
+      "Smart Point of Sale (POS) system optimized for fast retail management.",
+    longDescription:
+      "A streamlined Point of Sale desktop application focused on providing a fast, intuitive interface for managing cart operations, inventory, and checkout processes.",
+    images: [
+      "https://placehold.co/800x500/1a1a1a/e2e8f0?text=Swift+Cart+Image+1",
+      "https://placehold.co/800x500/1a1a1a/e2e8f0?text=Swift+Cart+Image+2",
+    ],
+    tech: ["JavaFX"],
+    github: "#",
     category: "Desktop",
   },
 ];
 
-const StackingProjectCard = ({ project, index }: { project: Project; index: number }) => {
+const StackingProjectCard = ({
+  project,
+  index,
+}: {
+  project: Project;
+  index: number;
+}) => {
   const [currentImage, setCurrentImage] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
+  const intervalsRef = useRef<Map<number, NodeJS.Timeout>>(new Map());
   const { scrollYProgress } = useScroll({
     target: cardRef,
     offset: ["start end", "start start"],
@@ -87,13 +166,11 @@ const StackingProjectCard = ({ project, index }: { project: Project; index: numb
       ref={cardRef}
       style={{ y, opacity, scale }}
       className="sticky w-full"
-      // Each card sticks a bit lower creating stacking effect
-      // Using inline style for dynamic top based on index
     >
       <div
-        className="w-full glass rounded-2xl overflow-hidden border border-border/50"
-        style={{ 
-          position: 'sticky',
+        className="w-full glass rounded-2xl overflow-hidden border border-border/50 bg-card/80 backdrop-blur-xl"
+        style={{
+          position: "sticky",
           top: `${120 + index * 40}px`,
           zIndex: index + 1,
         }}
@@ -102,32 +179,38 @@ const StackingProjectCard = ({ project, index }: { project: Project; index: numb
           const interval = setInterval(() => {
             setCurrentImage((prev) => (prev + 1) % project.images.length);
           }, 1500);
-          (window as any)[`proj_${index}`] = interval;
+          intervalsRef.current.set(index, interval);
         }}
         onMouseLeave={() => {
           setIsHovered(false);
-          clearInterval((window as any)[`proj_${index}`]);
+          const interval = intervalsRef.current.get(index);
+          if (interval) {
+            clearInterval(interval);
+            intervalsRef.current.delete(index);
+          }
           setCurrentImage(0);
         }}
         data-hoverable
       >
         <div className="flex flex-col lg:flex-row">
           {/* Large image frame - left side */}
-          <div className="relative w-full lg:w-1/2 h-64 sm:h-72 lg:h-[400px] overflow-hidden">
+          <div className="relative w-full lg:w-1/2 h-64 sm:h-72 lg:h-[400px] overflow-hidden bg-muted">
             {project.images.map((img, imgI) => (
               <img
                 key={imgI}
                 src={img}
                 alt={`${project.title} screenshot ${imgI + 1}`}
                 className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ${
-                  imgI === currentImage ? "opacity-100 scale-100" : "opacity-0 scale-105"
+                  imgI === currentImage
+                    ? "opacity-100 scale-100"
+                    : "opacity-0 scale-105"
                 }`}
                 loading="lazy"
               />
             ))}
             {/* Overlay gradient */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-card/80 hidden lg:block" />
-            <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-transparent to-transparent lg:hidden" />
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-card/90 hidden lg:block" />
+            <div className="absolute inset-0 bg-gradient-to-t from-card/90 via-transparent to-transparent lg:hidden" />
 
             {/* Image dots */}
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
@@ -136,14 +219,16 @@ const StackingProjectCard = ({ project, index }: { project: Project; index: numb
                   key={imgI}
                   onClick={() => setCurrentImage(imgI)}
                   className={`transition-all duration-300 rounded-full ${
-                    imgI === currentImage ? "bg-primary w-6 h-2" : "bg-foreground/30 w-2 h-2"
+                    imgI === currentImage
+                      ? "bg-primary w-6 h-2"
+                      : "bg-foreground/30 w-2 h-2"
                   }`}
                 />
               ))}
             </div>
 
             {/* Category badge */}
-            <span className="absolute top-4 left-4 px-3 py-1 text-xs font-mono rounded-full bg-primary/20 text-primary border border-primary/30 backdrop-blur-sm">
+            <span className="absolute top-4 left-4 px-3 py-1 text-xs font-mono rounded-full bg-background/50 text-foreground border border-border backdrop-blur-md">
               {project.category}
             </span>
           </div>
@@ -155,15 +240,19 @@ const StackingProjectCard = ({ project, index }: { project: Project; index: numb
               animate={{ x: isHovered ? 5 : 0 }}
               className="mb-2"
             >
-              <span className="text-xs font-mono text-primary/60 tracking-wider">PROJECT 0{index + 1}</span>
+              <span className="text-xs font-mono text-primary/80 tracking-wider">
+                PROJECT 0{index + 1}
+              </span>
             </motion.div>
 
             <h3 className="text-2xl sm:text-3xl font-heading font-bold text-foreground mb-3 flex items-center gap-2">
               {project.title}
-              <ChevronRight className={`w-5 h-5 text-primary transition-transform duration-300 ${isHovered ? "translate-x-2" : ""}`} />
+              <ChevronRight
+                className={`w-5 h-5 text-primary transition-transform duration-300 ${isHovered ? "translate-x-2" : ""}`}
+              />
             </h3>
 
-            <p className="text-muted-foreground leading-relaxed mb-6 text-sm sm:text-base">
+            <p className="text-muted-foreground leading-relaxed mb-6 text-sm sm:text-base h-20 overflow-hidden">
               {isHovered ? project.longDescription : project.description}
             </p>
 
@@ -174,21 +263,30 @@ const StackingProjectCard = ({ project, index }: { project: Project; index: numb
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: ti * 0.05 }}
-                  className="px-3 py-1.5 text-xs font-mono rounded-lg bg-secondary text-secondary-foreground border border-border/50"
+                  className="px-3 py-1.5 text-xs font-mono rounded-lg bg-secondary/50 text-secondary-foreground border border-border/50"
                 >
                   {t}
                 </motion.span>
               ))}
             </div>
 
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 mt-auto">
               {project.github && (
-                <a href={project.github} className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors font-mono group" data-hoverable>
-                  <Github className="w-4 h-4 group-hover:rotate-12 transition-transform" /> Source
+                <a
+                  href={project.github}
+                  className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors font-mono group"
+                  data-hoverable
+                >
+                  <Github className="w-4 h-4 group-hover:rotate-12 transition-transform" />{" "}
+                  Source
                 </a>
               )}
               {project.live && (
-                <a href={project.live} className="flex items-center gap-2 text-sm font-mono px-4 py-2 rounded-lg bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20 transition-all" data-hoverable>
+                <a
+                  href={project.live}
+                  className="flex items-center gap-2 text-sm font-mono px-4 py-2 rounded-lg bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20 transition-all"
+                  data-hoverable
+                >
                   <ExternalLink className="w-4 h-4" /> Live Demo
                 </a>
               )}
@@ -201,7 +299,11 @@ const StackingProjectCard = ({ project, index }: { project: Project; index: numb
 };
 
 const ProjectsSection = () => (
-  <SectionWrapper id="projects" title="Projects" subtitle="A selection of projects I've built and shipped.">
+  <SectionWrapper
+    id="projects"
+    title="Projects"
+    subtitle="A selection of projects I've built and shipped."
+  >
     <div className="space-y-8">
       {projects.map((project, i) => (
         <StackingProjectCard key={project.title} project={project} index={i} />

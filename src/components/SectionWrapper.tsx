@@ -9,7 +9,13 @@ interface SectionWrapperProps {
   className?: string;
 }
 
-const SectionWrapper = ({ id, title, subtitle, children, className = "" }: SectionWrapperProps) => {
+const SectionWrapper = ({
+  id,
+  title,
+  subtitle,
+  children,
+  className = "",
+}: SectionWrapperProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -28,10 +34,10 @@ const SectionWrapper = ({ id, title, subtitle, children, className = "" }: Secti
             transition={{ delay: 0.2 }}
             className="text-xs font-mono text-primary/60 tracking-[0.3em] uppercase block mb-3"
           >
-            {`// ${title}`}
+            {/* {`// ${title}`} */}
           </motion.span>
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-gradient inline-block">
-            {title}
+            {`// ${title}`}
           </h2>
           {subtitle && (
             <motion.p

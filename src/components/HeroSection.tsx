@@ -6,11 +6,11 @@ import { ChevronDown, Github, Linkedin, Twitter } from "lucide-react";
 
 const glitchVariants = {
   hidden: { opacity: 0, y: 40, skewX: -10 },
-  visible: { 
-    opacity: 1, 
-    y: 0, 
+  visible: {
+    opacity: 1,
+    y: 0,
     skewX: 0,
-    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
+    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
   },
 };
 
@@ -41,7 +41,10 @@ const TypingText = () => {
     let timeout: ReturnType<typeof setTimeout>;
 
     if (!isDeleting && displayed.length < target.length) {
-      timeout = setTimeout(() => setDisplayed(target.slice(0, displayed.length + 1)), 80);
+      timeout = setTimeout(
+        () => setDisplayed(target.slice(0, displayed.length + 1)),
+        80,
+      );
     } else if (!isDeleting && displayed.length === target.length) {
       timeout = setTimeout(() => setIsDeleting(true), 2000);
     } else if (isDeleting && displayed.length > 0) {
@@ -137,18 +140,18 @@ const HeroSection = () => {
           transition={{ delay: 0.2, duration: 0.5 }}
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-xs font-mono text-primary mb-8"
         >
-          <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-          Available for opportunities
+          {/* <span className="w-2 h-2 rounded-full bg-primary animate-pulse" /> */}
+          //Hello World
         </motion.div>
 
         <div className="overflow-hidden mb-4">
           <motion.h1
             initial={{ x: "100vw", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ 
-              duration: 1.2, 
+            transition={{
+              duration: 1.2,
               ease: [0.16, 1, 0.3, 1],
-              delay: 0.3 
+              delay: 0.3,
             }}
             className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-heading font-bold tracking-tight"
           >
@@ -159,10 +162,10 @@ const HeroSection = () => {
           <motion.h1
             initial={{ x: "100vw", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ 
-              duration: 1.2, 
+            transition={{
+              duration: 1.2,
               ease: [0.16, 1, 0.3, 1],
-              delay: 0.6 
+              delay: 0.6,
             }}
             className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-heading font-bold tracking-tight text-foreground"
           >
@@ -172,7 +175,7 @@ const HeroSection = () => {
 
         <motion.div
           initial={{ opacity: 0, width: 0 }}
-          animate={{ opacity: 1, width: '200px' }}
+          animate={{ opacity: 1, width: "200px" }}
           transition={{ delay: 0.9, duration: 0.8 }}
           className="h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-4"
         />
@@ -204,7 +207,10 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.4 + i * 0.1 }}
-              whileHover={{ y: -3, boxShadow: '0 0 20px hsl(25 95% 53% / 0.3)' }}
+              whileHover={{
+                y: -3,
+                boxShadow: "0 0 20px hsl(25 95% 53% / 0.3)",
+              }}
               className="p-3 rounded-full glass hover:border-primary/50 transition-all duration-300"
             >
               <Icon className="w-5 h-5 text-muted-foreground hover:text-primary transition-colors" />
@@ -224,7 +230,6 @@ const HeroSection = () => {
           transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
           className="flex flex-col items-center gap-2"
         >
-          <span className="text-xs font-mono text-muted-foreground/50">scroll</span>
           <ChevronDown className="w-5 h-5 text-primary/40" />
         </motion.div>
       </motion.div>
