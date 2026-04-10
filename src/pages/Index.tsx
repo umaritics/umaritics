@@ -7,11 +7,13 @@ import ExperienceSection from "@/components/ExperienceSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import CertificationsSection from "@/components/CertificationsSection";
 import ContactSection from "@/components/ContactSection";
+import FloatingBackground from "@/components/FloatingBackground";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden circuit-bg relative">
       <CustomCursor />
+      <FloatingBackground />
       <Navbar />
       <HeroSection />
       <AboutSection />
