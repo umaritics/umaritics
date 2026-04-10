@@ -59,7 +59,7 @@ const TypingText = () => {
       {displayed}
       <motion.span
         animate={{ opacity: [1, 0] }}
-        transition={{ repeat: Infinity, duration: 0.6, ease: "steps(1)" }}
+        transition={{ repeat: Infinity, duration: 0.6, ease: () => 1 }}
         className="text-primary"
       >
         |
