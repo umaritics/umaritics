@@ -23,23 +23,26 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      let current = "home";
+
+      for (const item of navItems) {
+        const el = document.querySelector(item.href) as HTMLElement | null;
+        if (el) {
+          const top = el.offsetTop - 150;
+          if (scrollY >= top) {
+            current = item.href.slice(1);
           }
-        });
-      },
-      { threshold: 0.3 }
-    );
+        }
+      }
 
-    navItems.forEach(item => {
-      const el = document.querySelector(item.href);
-      if (el) observer.observe(el);
-    });
+      setActiveSection(current);
+    };
 
-    return () => observer.disconnect();
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
