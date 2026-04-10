@@ -124,6 +124,7 @@ const HeroSection = () => {
       onClick={handleClick}
     >
       <HeroScene />
+      <HeroCircuit />
       <ParticleBurst particles={particles} />
 
       {/* Ambient glow */}
@@ -140,24 +141,34 @@ const HeroSection = () => {
           Available for opportunities
         </motion.div>
 
-        <motion.h1
-          variants={glitchVariants}
-          initial="hidden"
-          animate="visible"
-          transition={{ delay: 0.4 }}
-          className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-heading font-bold tracking-tight mb-4"
-        >
-          <span className="text-gradient">Muhammad</span>
-          <br />
-          <motion.span
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.7, duration: 0.6 }}
-            className="text-foreground"
+        <div className="overflow-hidden mb-4">
+          <motion.h1
+            initial={{ x: "100vw", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ 
+              duration: 1.2, 
+              ease: [0.16, 1, 0.3, 1],
+              delay: 0.3 
+            }}
+            className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-heading font-bold tracking-tight"
+          >
+            <span className="text-gradient">Muhammad</span>
+          </motion.h1>
+        </div>
+        <div className="overflow-hidden mb-4">
+          <motion.h1
+            initial={{ x: "100vw", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ 
+              duration: 1.2, 
+              ease: [0.16, 1, 0.3, 1],
+              delay: 0.6 
+            }}
+            className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-heading font-bold tracking-tight text-foreground"
           >
             Umar
-          </motion.span>
-        </motion.h1>
+          </motion.h1>
+        </div>
 
         <motion.div
           initial={{ opacity: 0, width: 0 }}
