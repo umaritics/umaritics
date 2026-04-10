@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { useEffect, useState, useCallback, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import HeroScene from "./HeroScene";
 import { ChevronDown, Github, Linkedin, Twitter } from "lucide-react";
 
@@ -12,10 +13,117 @@ const glitchVariants = {
   },
 };
 
-const HeroSection = () => {
+const subtitles = [
+  "Solutions Engineer",
+  "Software Developer",
+  "Full Stack Builder",
+  "Problem Solver",
+];
+
+interface Particle {
+  id: number;
+  x: number;
+  y: number;
+  vx: number;
+  vy: number;
+  life: number;
+  size: number;
+}
+
+const TypingText = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [displayed, setDisplayed] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const target = subtitles[currentIndex];
+    let timeout: ReturnType<typeof setTimeout>;
+
+    if (!isDeleting && displayed.length < target.length) {
+      timeout = setTimeout(() => setDisplayed(target.slice(0, displayed.length + 1)), 80);
+    } else if (!isDeleting && displayed.length === target.length) {
+      timeout = setTimeout(() => setIsDeleting(true), 2000);
+    } else if (isDeleting && displayed.length > 0) {
+      timeout = setTimeout(() => setDisplayed(displayed.slice(0, -1)), 40);
+    } else if (isDeleting && displayed.length === 0) {
+      setIsDeleting(false);
+      setCurrentIndex((prev) => (prev + 1) % subtitles.length);
+    }
+
+    return () => clearTimeout(timeout);
+  }, [displayed, isDeleting, currentIndex]);
+
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <span>
+      {displayed}
+      <motion.span
+        animate={{ opacity: [1, 0] }}
+        transition={{ repeat: Infinity, duration: 0.6, ease: "steps(1)" }}
+        className="text-primary"
+      >
+        |
+      </motion.span>
+    </span>
+  );
+};
+
+const ParticleBurst = ({ particles }: { particles: Particle[] }) => (
+  <AnimatePresence>
+    {particles.map((p) => (
+      <motion.div
+        key={p.id}
+        initial={{ x: p.x, y: p.y, opacity: 1, scale: 1 }}
+        animate={{
+          x: p.x + p.vx * 60,
+          y: p.y + p.vy * 60,
+          opacity: 0,
+          scale: 0,
+        }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="fixed pointer-events-none z-50"
+        style={{ width: p.size, height: p.size }}
+      >
+        <div className="w-full h-full rounded-full bg-primary" />
+      </motion.div>
+    ))}
+  </AnimatePresence>
+);
+
+const HeroSection = () => {
+  const [particles, setParticles] = useState<Particle[]>([]);
+  const idRef = useRef(0);
+
+  const handleClick = useCallback((e: React.MouseEvent) => {
+    const count = 12;
+    const newParticles: Particle[] = [];
+    for (let i = 0; i < count; i++) {
+      const angle = (Math.PI * 2 * i) / count + (Math.random() - 0.5) * 0.5;
+      const speed = 2 + Math.random() * 4;
+      newParticles.push({
+        id: idRef.current++,
+        x: e.clientX,
+        y: e.clientY,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed,
+        life: 1,
+        size: 3 + Math.random() * 5,
+      });
+    }
+    setParticles((prev) => [...prev, ...newParticles]);
+    setTimeout(() => {
+      setParticles((prev) => prev.filter((p) => !newParticles.includes(p)));
+    }, 900);
+  }, []);
+
+  return (
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      onClick={handleClick}
+    >
       <HeroScene />
+      <ParticleBurst particles={particles} />
 
       {/* Ambient glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
@@ -63,7 +171,7 @@ const HeroSection = () => {
           transition={{ delay: 1 }}
           className="text-lg md:text-xl text-muted-foreground font-mono tracking-wider"
         >
-          Solutions Engineer
+          <TypingText />
         </motion.p>
 
         <motion.div
