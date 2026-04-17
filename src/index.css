@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -61,11 +61,17 @@
     cursor: none;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-heading;
   }
 
-  code, pre {
+  code,
+  pre {
     @apply font-mono;
   }
 
@@ -127,7 +133,7 @@
 
   /* Scanline overlay */
   .scanlines::after {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
     background: repeating-linear-gradient(
@@ -139,5 +145,25 @@
     );
     pointer-events: none;
     z-index: 1;
+  }
+}
+
+/* Add this to your global CSS file */
+* {
+  cursor: none !important;
+}
+
+/* Optional: If you also want to hide it on specific interactive pseudo-elements */
+a,
+button,
+input,
+select,
+textarea {
+  cursor: none !important;
+}
+
+@media (pointer: fine) {
+  * {
+    cursor: none !important;
   }
 }

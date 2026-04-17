@@ -1,5 +1,13 @@
-import { motion, AnimatePresence } from "framer-motion";
-import { Home, User, Code2, Briefcase, FolderGit2, Award, Mail, Menu, X } from "lucide-react";
+import { motion } from "framer-motion";
+import {
+  Home,
+  User,
+  Code2,
+  Briefcase,
+  FolderGit2,
+  Award,
+  Mail,
+} from "lucide-react";
 import { useState, useEffect } from "react";
 
 const navItems = [
@@ -13,13 +21,11 @@ const navItems = [
 ];
 
 const Navbar = () => {
-  const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
 
   const scrollTo = (href: string) => {
     const el = document.querySelector(href);
     el?.scrollIntoView({ behavior: "smooth" });
-    setMobileOpen(false);
   };
 
   useEffect(() => {
@@ -47,13 +53,14 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Desktop navbar */}
+      {/* Desktop & Mobile navbar */}
       <motion.nav
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 1, duration: 0.6 }}
-        className="fixed top-6 left-0 right-0 z-50 hidden md:flex justify-center"
+        className="fixed top-4 sm:top-6 left-0 right-0 z-50 flex justify-center px-2"
       >
+        {/* FIX: Removed overflow-x-auto and scrollbar hiding classes so the tooltips can break out of the container vertically */}
         <div className="glass rounded-full px-2 py-2 flex items-center gap-1">
           {navItems.map((item) => {
             const isActive = activeSection === item.href.slice(1);
@@ -62,18 +69,21 @@ const Navbar = () => {
                 key={item.label}
                 data-hoverable
                 onClick={() => scrollTo(item.href)}
-                className={`relative group p-3 rounded-full transition-colors duration-300 ${
-                  isActive ? 'bg-primary/15' : 'hover:bg-primary/10'
+                // FIX: Used p-2.5 for mobile and sm:p-3 for larger screens to ensure it fits without scrolling
+                className={`relative group p-2.5 sm:p-3 rounded-full transition-colors duration-300 ${
+                  isActive ? "bg-primary/15" : "hover:bg-primary/10"
                 }`}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <item.icon className={`w-4 h-4 transition-colors ${
-                  isActive ? 'text-primary' : 'text-muted-foreground group-hover:text-primary'
-                }`} />
-                <motion.span
-                  className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs font-mono text-primary bg-card border border-border px-2 py-1 rounded-md whitespace-nowrap pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-                >
+                <item.icon
+                  className={`w-4 h-4 transition-colors ${
+                    isActive
+                      ? "text-primary"
+                      : "text-muted-foreground group-hover:text-primary"
+                  }`}
+                />
+                <motion.span className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs font-mono text-primary bg-card border border-border px-2 py-1 rounded-md whitespace-nowrap pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                   {item.label}
                 </motion.span>
               </motion.button>
@@ -81,44 +91,6 @@ const Navbar = () => {
           })}
         </div>
       </motion.nav>
-
-      {/* Mobile hamburger */}
-      <motion.button
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1 }}
-        onClick={() => setMobileOpen(!mobileOpen)}
-        className="fixed top-4 right-4 z-[60] md:hidden p-3 glass rounded-full"
-      >
-        {mobileOpen ? <X className="w-5 h-5 text-primary" /> : <Menu className="w-5 h-5 text-primary" />}
-      </motion.button>
-
-      {/* Mobile menu */}
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: '100%' }}
-            transition={{ type: 'spring', damping: 25 }}
-            className="fixed inset-0 z-[55] bg-background/95 backdrop-blur-lg flex flex-col items-center justify-center gap-6 md:hidden"
-          >
-            {navItems.map((item, i) => (
-              <motion.button
-                key={item.label}
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.05 }}
-                onClick={() => scrollTo(item.href)}
-                className="flex items-center gap-3 text-lg font-heading text-foreground hover:text-primary transition-colors"
-              >
-                <item.icon className="w-5 h-5 text-primary" />
-                {item.label}
-              </motion.button>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
     </>
   );
 };
