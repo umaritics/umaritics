@@ -75,8 +75,16 @@ const ContactSection = () => {
 
             <div className="flex gap-3 pt-4">
               {[
-                { icon: Github, href: "#", label: "GitHub" },
-                { icon: Linkedin, href: "#", label: "LinkedIn" },
+                {
+                  icon: Github,
+                  href: "https://github.com/umaritics",
+                  label: "GitHub",
+                },
+                {
+                  icon: Linkedin,
+                  href: "https://www.linkedin.com/in/umarific",
+                  label: "LinkedIn",
+                },
                 { icon: Twitter, href: "#", label: "Twitter" },
               ].map(({ icon: Icon, href, label }, i) => (
                 <motion.a

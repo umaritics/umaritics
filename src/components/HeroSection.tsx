@@ -196,9 +196,17 @@ const HeroSection = () => {
           className="flex items-center justify-center gap-4 mt-8"
         >
           {[
-            { icon: Github, href: "#", label: "GitHub" },
-            { icon: Linkedin, href: "#", label: "LinkedIn" },
-            { icon: Twitter, href: "#", label: "Twitter" },
+            {
+              icon: Github,
+              href: "https://github.com/umaritics",
+              label: "GitHub",
+            },
+            {
+              icon: Linkedin,
+              href: "https://linkedin.com/in/umarific",
+              label: "LinkedIn",
+            },
+            { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
           ].map(({ icon: Icon, href, label }, i) => (
             <motion.a
               key={label}

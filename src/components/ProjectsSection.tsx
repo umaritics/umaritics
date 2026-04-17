@@ -22,12 +22,19 @@ const projects: Project[] = [
     longDescription:
       "An intelligent resume generation tool that leverages the Gemini API to help users craft professional resumes seamlessly. Built for high performance and fast global access.",
     images: [
-      "https://placehold.co/800x500/1a1a1a/e2e8f0?text=Resumator+Image+1",
-      "https://placehold.co/800x500/1a1a1a/e2e8f0?text=Resumator+Image+2",
+      "../src/assets/resumator/main1.png",
+      "../src/assets/resumator/main2.png",
+      "../src/assets/resumator/main3.png",
+      "../src/assets/resumator/template_select.png",
+      "../src/assets/resumator/make_resume1.png",
+      "../src/assets/resumator/make_resume2.png",
+      "../src/assets/resumator/make_resume3.png",
+      "../src/assets/resumator/make_resume4.png",
+      "../src/assets/resumator/resume_preview.png",
     ],
     tech: ["Next.js", "Gemini", "Tailwind CSS", "Vercel"],
-    github: "#",
-    live: "#",
+    github: "https://github.com/umaritics/Resumator",
+    live: "https://resumator-zeta.vercel.app/",
     category: "Web / AI",
   },
   {
@@ -37,12 +44,14 @@ const projects: Project[] = [
     longDescription:
       "A web application designed to distill lengthy blog posts into concise summaries. It integrates advanced Hugging Face models to process text and deliver a seamless reading experience.",
     images: [
-      "https://placehold.co/800x500/1a1a1a/e2e8f0?text=Concisio+Image+1",
-      "https://placehold.co/800x500/1a1a1a/e2e8f0?text=Concisio+Image+2",
+      "../src/assets/concisio/Main Page.png",
+      "../src/assets/concisio/Mp2.png",
+      "../src/assets/concisio/Summarizer.png",
+      "../src/assets/concisio/Contact Us.png",
     ],
     tech: ["Next.js", "Hugging Face", "Tailwind CSS", "Vercel"],
-    github: "#",
-    live: "#",
+    github: "https://github.com/umaritics/Blog-Summarizer",
+    live: "https://blog-summarizer-six.vercel.app/",
     category: "Web / AI",
   },
   {
@@ -66,7 +75,7 @@ const projects: Project[] = [
       "Picasso",
       "XML",
     ],
-    github: "#",
+    github: "https://github.com/umaritics/Socially",
     category: "Mobile",
   },
   {
@@ -80,7 +89,7 @@ const projects: Project[] = [
       "https://placehold.co/800x500/1a1a1a/e2e8f0?text=List+It+Image+2",
     ],
     tech: ["Kotlin", "PHP", "Firebase", "Agora API", "Geolocation APIs"],
-    github: "#",
+    github: "https://github.com/umaritics/listit-marketplace",
     category: "Mobile",
   },
   {
@@ -94,7 +103,7 @@ const projects: Project[] = [
       "https://placehold.co/800x500/1a1a1a/e2e8f0?text=FastPay+Image+2",
     ],
     tech: ["JavaFX", "Supabase"],
-    github: "#",
+    github: "https://github.com/umaritics/FastPay-digital-wallet",
     category: "Desktop",
   },
   {
@@ -104,8 +113,15 @@ const projects: Project[] = [
     longDescription:
       "A management system designed to handle the complex data and operations of a travel agency, utilizing a reliable relational database architecture for scale.",
     images: [
-      "https://placehold.co/800x500/1a1a1a/e2e8f0?text=Travel+Ease+Image+1",
-      "https://placehold.co/800x500/1a1a1a/e2e8f0?text=Travel+Ease+Image+2",
+      "../src/assets/travelease/CoverPage.png",
+      "../src/assets/travelease/Login.png",
+      "../src/assets/travelease/Signup.png",
+      "../src/assets/travelease/Admin.png",
+      "../src/assets/travelease/Traveler.png",
+      "../src/assets/travelease/TourOperator.png",
+      "../src/assets/travelease/Guide.png",
+      "../src/assets/travelease/Hotel.png",
+      "../src/assets/travelease/Transport.png",
     ],
     tech: ["C#", ".NET", "SQL Server (SSMS)"],
     github: "#",
@@ -118,11 +134,12 @@ const projects: Project[] = [
     longDescription:
       "A desktop utility tool that reads real-time Windows battery reports and status data to provide smart alarms and detailed analytics, helping users prolong their device's battery lifespan.",
     images: [
-      "https://placehold.co/800x500/1a1a1a/e2e8f0?text=Cell+Sense+Image+1",
-      "https://placehold.co/800x500/1a1a1a/e2e8f0?text=Cell+Sense+Image+2",
+      "../src/assets/cellsense/Dashboard.png",
+      "../src/assets/cellsense/Analytics.png",
+      "../src/assets/cellsense/History.png",
     ],
     tech: ["JavaFX", "Windows Data Reports"],
-    github: "#",
+    github: "https://github.com/umaritics/CellSense",
     category: "Desktop",
   },
   {
@@ -132,8 +149,18 @@ const projects: Project[] = [
     longDescription:
       "A streamlined Point of Sale desktop application focused on providing a fast, intuitive interface for managing cart operations, inventory, and checkout processes.",
     images: [
-      "https://placehold.co/800x500/1a1a1a/e2e8f0?text=Swift+Cart+Image+1",
-      "https://placehold.co/800x500/1a1a1a/e2e8f0?text=Swift+Cart+Image+2",
+      "../src/assets/swiftcart/POS.png",
+      "../src/assets/swiftcart/Receipt.png",
+      "../src/assets/swiftcart/dashboard.png",
+      "../src/assets/swiftcart/Manage Products.png",
+      "../src/assets/swiftcart/Manage Discounts.png",
+      "../src/assets/swiftcart/Manage Cashiers.png",
+      "../src/assets/swiftcart/Sales Reports.png",
+      "../src/assets/swiftcart/Inventory Reports.png",
+      "../src/assets/swiftcart/Discount Reports.png",
+      "../src/assets/swiftcart/Cashier Performance.png",
+      "../src/assets/swiftcart/Flop Products.png",
+      "../src/assets/swiftcart/login.png",
     ],
     tech: ["JavaFX"],
     github: "#",
@@ -200,7 +227,7 @@ const StackingProjectCard = ({
                 key={imgI}
                 src={img}
                 alt={`${project.title} screenshot ${imgI + 1}`}
-                className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ${
+                className={`absolute inset-0 w-full h-full object-contain transition-all duration-1000 ${
                   imgI === currentImage
                     ? "opacity-100 scale-100"
                     : "opacity-0 scale-105"
@@ -209,7 +236,7 @@ const StackingProjectCard = ({
               />
             ))}
             {/* Overlay gradient */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-card/90 hidden lg:block" />
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-card/20 hidden lg:block" />
             <div className="absolute inset-0 bg-gradient-to-t from-card/90 via-transparent to-transparent lg:hidden" />
 
             {/* Image dots */}
