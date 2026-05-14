@@ -38,6 +38,77 @@ const projects: Project[] = [
     category: "Web / AI",
   },
   {
+    title: "Inkblot",
+    description:
+      "A highly concurrent, real-time multiplayer drawing platform featuring low-latency state synchronization.",
+    longDescription:
+      "A full-stack, scalable multiplayer web application engineered to handle complex distributed client states. It features a collaborative WebSockets canvas with concurrent rendering, a custom stateless JWT authentication pipeline, and a comprehensive Admin Dashboard with Role-Based Access Control (RBAC). Built to handle multi-client room orchestration, configurable event loops, and dynamic state-recovery via Socket.IO snapshot replay.",
+    images: [
+      "/assets/inkblot/Auth.png",
+      "/assets/inkblot/Dashboard.png",
+      "/assets/inkblot/game.png",
+      "/assets/inkblot/guess.png",
+    ],
+    tech: [
+      "Next.js 15",
+      "TypeScript",
+      "Socket.IO",
+      "MongoDB Atlas",
+      "jose (JWT)",
+      "bcryptjs",
+      "Resend API",
+      "Vercel",
+      "Railway",
+    ],
+    github: "https://github.com/Shahmeer-Atif/InkBlot",
+    live: "https://ink-blot.vercel.app",
+    category: "Full-Stack / Real-time Systems",
+  },
+  {
+    title: "FastPay",
+    description:
+      "Digital banking wallet with intelligent balance partition functionality.",
+    longDescription:
+      "A robust digital wallet application built for secure fund management. It allows users to partition their balances for better financial tracking and organization.",
+    images: [
+      "/assets/fastpay/dashboard.png",
+      "/assets/fastpay/add_money_dialog.png",
+      "/assets/fastpay/bank_topup.png",
+      "/assets/fastpay/qr_code_slip.png",
+      "/assets/fastpay/new_partition.png",
+      "/assets/fastpay/order_card.jpeg",
+      "/assets/fastpay/manage_card.png",
+      "/assets/fastpay/transaction_log.png",
+      "/assets/fastpay/bills_payment.png",
+      "/assets/fastpay/raast.png",
+      "/assets/fastpay/mobile_topup.png",
+      "/assets/fastpay/donations.png",
+      "/assets/fastpay/mtag_topup.png",
+      "/assets/fastpay/send_money.png",
+      "/assets/fastpay/authentication.png",
+    ],
+    tech: ["JavaFX", "Supabase"],
+    github: "https://github.com/umaritics/FastPay-digital-wallet",
+    category: "Desktop",
+  },
+  {
+    title: "Insight Reader",
+    description:
+      "Intelligent reading comprehension and automated quiz generation system built with Classical ML.",
+    longDescription:
+      "A full-stack EdTech application powered by Scikit-Learn ensembles and statistical NLP (TF-IDF) to verify answers and generate dynamic, mathematically plausible distractors.",
+    images: [
+      "/assets/insight-reader/ArticleInput.png",
+      "/assets/insight-reader/QuizView.png",
+      "/assets/insight-reader/Hints.png",
+      "/assets/insight-reader/Analytics.png",
+    ],
+    tech: ["React", "FastAPI", "Scikit-Learn", "Tailwind CSS", "Python"],
+    github: "https://github.com/umaritics/insight-reader",
+    live: "", // Add your live deployment link here if you host it (e.g., Vercel + Render)
+    category: "Web / Machine Learning",
+  },
+  {
     title: "Concisio",
     description:
       "Intelligent blog summarizer powered by Hugging Face NLP models.",
@@ -53,6 +124,45 @@ const projects: Project[] = [
     github: "https://github.com/umaritics/Blog-Summarizer",
     live: "https://blog-summarizer-six.vercel.app/",
     category: "Web / AI",
+  },
+  {
+    title: "Cell Sense",
+    description:
+      "Smart battery alarm and analytics tool utilizing real-time system data.",
+    longDescription:
+      "A desktop utility tool that reads real-time Windows battery reports and status data to provide smart alarms and detailed analytics, helping users prolong their device's battery lifespan.",
+    images: [
+      "/assets/cellsense/Dashboard.png",
+      "/assets/cellsense/Analytics.png",
+      "/assets/cellsense/History.png",
+    ],
+    tech: ["JavaFX", "Windows Data Reports"],
+    github: "https://github.com/umaritics/CellSense",
+    category: "Desktop",
+  },
+  {
+    title: "Swift Cart",
+    description:
+      "Smart Point of Sale (POS) system optimized for fast retail management.",
+    longDescription:
+      "A streamlined Point of Sale desktop application focused on providing a fast, intuitive interface for managing cart operations, inventory, and checkout processes.",
+    images: [
+      "/assets/swiftcart/POS.png",
+      "/assets/swiftcart/Receipt.png",
+      "/assets/swiftcart/dashboard.png",
+      "/assets/swiftcart/Manage Products.png",
+      "/assets/swiftcart/Manage Discounts.png",
+      "/assets/swiftcart/Manage Cashiers.png",
+      "/assets/swiftcart/Sales Reports.png",
+      "/assets/swiftcart/Inventory Reports.png",
+      "/assets/swiftcart/Discount Reports.png",
+      "/assets/swiftcart/Cashier Performance.png",
+      "/assets/swiftcart/Flop Products.png",
+      "/assets/swiftcart/login.png",
+    ],
+    tech: ["JavaFX"],
+    github: "#",
+    category: "Desktop",
   },
   {
     title: "Socially",
@@ -93,20 +203,6 @@ const projects: Project[] = [
     category: "Mobile",
   },
   {
-    title: "FastPay",
-    description:
-      "Digital banking wallet with intelligent balance partition functionality.",
-    longDescription:
-      "A robust digital wallet application built for secure fund management. It allows users to partition their balances for better financial tracking and organization.",
-    images: [
-      "https://placehold.co/800x500/1a1a1a/e2e8f0?text=FastPay+Image+1",
-      "https://placehold.co/800x500/1a1a1a/e2e8f0?text=FastPay+Image+2",
-    ],
-    tech: ["JavaFX", "Supabase"],
-    github: "https://github.com/umaritics/FastPay-digital-wallet",
-    category: "Desktop",
-  },
-  {
     title: "Travel Ease",
     description:
       "Comprehensive desktop application for travel agency management.",
@@ -124,45 +220,6 @@ const projects: Project[] = [
       "/assets/travelease/Transport.png",
     ],
     tech: ["C#", ".NET", "SQL Server (SSMS)"],
-    github: "#",
-    category: "Desktop",
-  },
-  {
-    title: "Cell Sense",
-    description:
-      "Smart battery alarm and analytics tool utilizing real-time system data.",
-    longDescription:
-      "A desktop utility tool that reads real-time Windows battery reports and status data to provide smart alarms and detailed analytics, helping users prolong their device's battery lifespan.",
-    images: [
-      "/assets/cellsense/Dashboard.png",
-      "/assets/cellsense/Analytics.png",
-      "/assets/cellsense/History.png",
-    ],
-    tech: ["JavaFX", "Windows Data Reports"],
-    github: "https://github.com/umaritics/CellSense",
-    category: "Desktop",
-  },
-  {
-    title: "Swift Cart",
-    description:
-      "Smart Point of Sale (POS) system optimized for fast retail management.",
-    longDescription:
-      "A streamlined Point of Sale desktop application focused on providing a fast, intuitive interface for managing cart operations, inventory, and checkout processes.",
-    images: [
-      "/assets/swiftcart/POS.png",
-      "/assets/swiftcart/Receipt.png",
-      "/assets/swiftcart/dashboard.png",
-      "/assets/swiftcart/Manage Products.png",
-      "/assets/swiftcart/Manage Discounts.png",
-      "/assets/swiftcart/Manage Cashiers.png",
-      "/assets/swiftcart/Sales Reports.png",
-      "/assets/swiftcart/Inventory Reports.png",
-      "/assets/swiftcart/Discount Reports.png",
-      "/assets/swiftcart/Cashier Performance.png",
-      "/assets/swiftcart/Flop Products.png",
-      "/assets/swiftcart/login.png",
-    ],
-    tech: ["JavaFX"],
     github: "#",
     category: "Desktop",
   },
@@ -303,6 +360,7 @@ const StackingProjectCard = ({
                   href={project.github}
                   className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors font-mono group"
                   data-hoverable
+                  target="_blank"
                 >
                   <Github className="w-4 h-4 group-hover:rotate-12 transition-transform" />{" "}
                   Source
@@ -313,6 +371,7 @@ const StackingProjectCard = ({
                   href={project.live}
                   className="flex items-center gap-2 text-sm font-mono px-4 py-2 rounded-lg bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20 transition-all"
                   data-hoverable
+                  target="_blank"
                 >
                   <ExternalLink className="w-4 h-4" /> Live Demo
                 </a>
